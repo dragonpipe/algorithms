@@ -1,26 +1,24 @@
 function lengthOfLongestSubstring(string){
     var substring = []
-    var length, finallength=0
-    for (let i of string){
-        if (substring.includes(i)){
+    var character,length, finallength=0
+    for (character of string){
+        if (substring.includes(character)){
             length = substring.length
             if (length > finallength){
-                finallength=length
-                console.log(substring.join(''))
+                finallength=length   
             }
             substring = []
         }
-        substring.push(i)
+        substring.push(character)
     }
-    
     length = substring.length
     if (length > finallength){
         finallength=length
-        console.log(substring.join(''))
     }
    
     return finallength
 }
 
 
-console.log(lengthOfLongestSubstring('abrkaabcdefghij'))
+console.log(lengthOfLongestSubstring(''))
+console.log(lengthOfLongestSubstring('abrkaabcdefghj'))
