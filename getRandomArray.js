@@ -15,4 +15,4 @@ function getRandomArray(maxValue,long){
     return randomArray
 }
 
-console.log("Random array: " + getRandomArray(10,7))
+console.log("Random array: " + getRandomArray(31,5))

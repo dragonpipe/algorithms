@@ -1,4 +1,4 @@
-var arregloAOrdenar = [5,2,4,7,8,9]
+var arregloAOrdenar = [5,2,4,7,8,1,10]
 
 console.log("Trying to Sort the array: " + arregloAOrdenar);
 console.log(RandomSort(arregloAOrdenar));

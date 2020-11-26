@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="file" />
+    <h1 id="text"></h1>
+    <script>
+        console.log("hello");
+      var input = document.querySelector("input")
+      var text = document.getElementById("text")
+      var textnode = document.createTextNode("No Files")
+      var textnode2 = document.createTextNode("YES FILES")
+      input.addEventListener("change",async ()=>{
+        const curFiles = input.files
+        if(curFiles.length === 0){
+            text.appendChild(textnode)
+        }else{
+            text.appendChild(textnode2)
+            console.log(curFiles[0]);
+            const text = await curFiles[0].text()
+            text.innerText = text
+        }
+      });
+
+    </script>
+  </body>
+</html>
